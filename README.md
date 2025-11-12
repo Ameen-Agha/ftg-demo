@@ -1,4 +1,4 @@
-# Ameen's First FTG Demo Project  
+# Ameen's First FTG Demo Project💻
 
 This is a simple **Java Spring Boot** application connected to a **PostgreSQL** database using **Docker** and **Docker Compose**.
 
