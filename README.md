@@ -33,7 +33,7 @@ Then opened http://localhost:8080 to confirm the app works.
 
 
 🏗️ **Kubernetes, Minikube & Helm — Simple Explanation:**
-Kubernetes is a system that automatically runs, manages, and scales containerized applications. Instead of manually starting Docker containers yourself, Kubernetes keeps them running, restarts them if they fail, and replaces them if they crash.
-Minikube gives us a small, local Kubernetes cluster on our laptop so we can test exactly how an app would run in a real production environment. 
-Helm makes this easier by packaging all the Kubernetes files (Deployments, Services, ConfigMaps, etc.) into one reusable “chart,” allowing us to deploy the entire application—our Java service and its PostgreSQL database—with a single command.
-Together, Kubernetes + Minikube + Helm provide an automated, organized, and repeatable way to deploy and manage applications.
+- Kubernetes is a system that automatically runs, manages, and scales containerized applications. Instead of manually starting Docker containers yourself, Kubernetes keeps them running, restarts them if they fail, and replaces them if they crash.
+- Minikube gives us a small, local Kubernetes cluster on our laptop so we can test exactly how an app would run in a real production environment.
+- Helm makes this easier by packaging all the Kubernetes files (Deployments, Services, ConfigMaps, etc.) into one reusable “chart,” allowing us to deploy the entire application—our Java service and its PostgreSQL database—with a single command.
+- Together, Kubernetes + Minikube + Helm provide an automated, organized, and repeatable way to deploy and manage applications.
