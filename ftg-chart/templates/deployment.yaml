@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "ftg-chart.fullname" . }}
+  labels:
+    app: {{ include "ftg-chart.fullname" . }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ include "ftg-chart.fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: {{ include "ftg-chart.fullname" . }}
+    spec:
+      serviceAccountName: {{ include "ftg-chart.serviceAccountName" . }}
+      containers:
+        - name: app
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - containerPort: 8080
+          env:
+            - name: APP_PORT
+              value: "8080"
+            - name: DB_HOST
+              value: "ftg-demo-db"
+            - name: DB_PORT
+              value: "5432"
+            - name: DB_NAME
+              value: "demo_db"
+            - name: DB_USER
+              value: "postgres"
+            - name: DB_PASSWORD
+              value: "postgres"
